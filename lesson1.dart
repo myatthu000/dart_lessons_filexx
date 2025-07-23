@@ -1,4 +1,4 @@
-import 'dart:io'; // Importing the dart:io library to use stdin for input
+// Importing the dart:io library to use stdin for input
 void main() {
   //Variables
 //   print(19);
@@ -137,7 +137,6 @@ void main() {
     //   print('optionalValue: $optionalValue');
     // }
   
-}
 
 // void workHere(int optionalValue) {
 //       if (optionalValue == 1) {
@@ -158,3 +157,21 @@ void main() {
 //         print('optionalValue is not 1 or 2, skipping input prompt.');
 //       }
 //   }
+
+  // Map and Iteration
+  // Map<String, int> studentMarks = {
+  //   'Alice': 85,
+  //   'Bob': 90,
+  //   'Charlie': 78,
+  // };
+
+  // for (String student in studentMarks.keys) {
+  //   print('$student: ${studentMarks[student]}'); // Output: Alice: 85, Bob: 90, Charlie: 78
+  // }
+
+  // // Using forEach to iterate over the map
+  // studentMarks.forEach((student, marks) {
+  //   print('$student: $marks'); // Output: Alice: 85, Bob: 90, Charlie: 78
+  // });
+
+}

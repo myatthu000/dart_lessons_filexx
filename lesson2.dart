@@ -52,48 +52,90 @@
 // }
 
 
-int initialValue = 10;
+// int initialValue = 10;
 
-void main(){
+// void main(){
   
-  // print(Cookie()); //instance of class
-  // var cookie = Cookie();
-  Cookie cookie = Cookie('Hello', 25.5);
-  // Cookie cookie = Cookie('Rectangle', 20.5);
+//   // print(Cookie()); //instance of class
+//   // var cookie = Cookie();
+//   Cookie cookie = Cookie('Hello', 25.5);
+//   // Cookie cookie = Cookie('Rectangle', 20.5);
 
-  print(cookie.shape);
-  print(cookie.size);
-  // cookie.backing();
+//   print(cookie.shape);
+//   print(cookie.size);
+//   // cookie.backing();
 
-  // cookie.shape = 'Square';
-  // print('Shape: ${cookie.shape}');
+//   // cookie.shape = 'Square';
+//   // print('Shape: ${cookie.shape}');
 
-  cookie.baking();
-  cookie.processing();
-  cookie.baked();
-  print('Is cooling: ${!cookie.isCooling()}');
+//   cookie.baking();
+//   cookie.processing();
+//   cookie.baked();
+//   print('Is cooling: ${!cookie.isCooling()}');
+// }
+
+// class Cookie {
+//   // variables or property
+//   String? shape = 'Circle';
+//   double? size = 15.3;
+
+//   int? x = initialValue; // using global variable
+//   // int? y = this.x; // using this keyword to refer to the instance variable //cant access
+//   late int? y = this.x; // using late keyword to initialize later
+  
+//   // Cookie(){
+//   //   print('-------Cookie constructor work.-------');
+//   // }
+
+//   Cookie(this.shape, this.size) {
+//     print('-------Cookie constructor work.-------');
+//     // print('Cookie constructor called with shape: $shape and size: $size');
+//     print(this.shape); // using this keyword to refer to the instance variable
+//     this.shape = shape;
+//     this.size = size;
+//   }
+  
+//   // function or method
+//   void baking(){
+//     print('Baking has started.');
+//   }
+  
+//   bool isCooling(){
+//     return false;
+//   }
+  
+//   void processing(){
+//     print('Cooking has baking');
+//   }
+
+//   void baked() {
+//     print('Cookie is baked.');
+//   }
+  
+  
+// }
+
+int main(){
+
+  // Cookie cookie = Cookie('Circle', 15.3);
+  Cookie cookie = Cookie(shape: 'Circle', size: 15.3);
+  print('Shape: ${cookie.shape}');
+  print('Size: ${cookie.size}');
+  
+  return 0;
+
 }
 
 class Cookie {
   // variables or property
-  String? shape = 'Circle';
-  double? size = 15.3;
+  final String shape;
+  final double size;
 
-  int? x = initialValue; // using global variable
-  // int? y = this.x; // using this keyword to refer to the instance variable //cant access
-  late int? y = this.x; // using late keyword to initialize later
-  
-  // Cookie(){
-  //   print('-------Cookie constructor work.-------');
-  // }
-
-  Cookie(this.shape, this.size) {
-    print('-------Cookie constructor work.-------');
-    // print('Cookie constructor called with shape: $shape and size: $size');
-    print(this.shape); // using this keyword to refer to the instance variable
-    this.shape = shape;
-    this.size = size;
+  // Cookie(this.shape, this.size);
+  Cookie({required this.shape, required this.size}){
+    baking();
   }
+
   
   // function or method
   void baking(){
@@ -104,13 +146,8 @@ class Cookie {
     return false;
   }
   
-  void processing(){
-    print('Cooking has baking');
-  }
 
   void baked() {
     print('Cookie is baked.');
   }
-  
-  
 }
